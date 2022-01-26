@@ -27,7 +27,7 @@ o
 node app
 ```
 
-##### Si la respuesta en consola es un _Server running on port xxx_ y _Database online!_ puedes empezar a realizar peticiones
+##### Si la respuesta en consola es un _Server running on port xxx_ puedes empezar a realizar peticiones
 
 # Endpoints a utilizar
 
