@@ -25,9 +25,17 @@ const getOne = async (req, res = response) => {
       resp = await service.listOne(key);
     }
     data = resp.data;
-    Object.keys(data).length > 0
-      ? res.status(200).json(data)
-      : res.status(404).json({ message: `No se encontró el indicador ${key}` });
+    if (Object.keys(data).length > 0) {
+      if (data.values) {
+        data.values = Object.entries(data.values).map((val) => ({
+          timestamp: Number(val[0]),
+          value: val[1],
+        }));
+      }
+      res.status(200).json(data);
+    } else {
+      res.status(404).json({ message: `No se encontró el indicador ${key}` });
+    }
   } catch (error) {
     returnError(error, res);
   }
