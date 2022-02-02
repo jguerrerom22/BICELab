@@ -1,7 +1,7 @@
 # Configuración del API
 
 Esta API realiza la integración con los servicios de Indecon.
-Se puede tomar como referencia [este enlace](<[Link](https://www.indecon.site/)>)
+Se puede tomar como referencia este enlace: https://www.indecon.site/
 
 A continuación se establecen los pasos para la configuración y ejecución del proyecto:
 
